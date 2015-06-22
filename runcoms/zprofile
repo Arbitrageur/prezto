@@ -43,10 +43,10 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  ~/bin
   /usr/local/{bin,sbin}
   $path
 )
-
 #
 # Less
 #
@@ -72,3 +72,14 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#
+# Pyenv configuration
+#
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PYENV_ROOT=/usr/local/var/pyenv
+
+#
+# Pyenv-virtualenv configuration
+#
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
