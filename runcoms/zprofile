@@ -76,8 +76,8 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 #
 # Pyenv configuration
 #
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 #
 # Pyenv-virtualenv configuration
