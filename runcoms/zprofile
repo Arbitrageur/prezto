@@ -43,6 +43,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
+  ~/miniconda2/bin
   ~/bin
   /usr/local/{bin,sbin}
   $path
@@ -86,3 +87,8 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 
 alias ec='noglob emacsclient -n'
 alias node='noglob node'
+# Initialization for FDK command line tools.Sat Oct 31 09:47:25 2015
+FDK_EXE="/Users/ykwon/bin/FDK/Tools/osx"
+PATH=${PATH}:"/Users/ykwon/bin/FDK/Tools/osx"
+export PATH
+export FDK_EXE
